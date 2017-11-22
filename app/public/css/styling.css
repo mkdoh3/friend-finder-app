@@ -1,0 +1,19 @@
+.question {
+    text-align: center;
+}
+
+.btn-group {
+    width: 80%;
+    margin: 1em auto 1em;
+}
+
+button {
+    height: 4em
+}
+
+.sentiment {
+    text-align: center;
+    font-size: .85em;
+    /*    margin: 1em*/
+    padding: 1.25em
+}
