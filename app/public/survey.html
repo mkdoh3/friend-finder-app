@@ -12,11 +12,6 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="./css/styling.css">
 
-
-
-
-
-
 </head>
 
 <body>
@@ -45,28 +40,11 @@
         <label for="test4">5</label>
     </div>
 </form>
-
-
-
-
-<p>Or maybe this..</p>
-<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
-    <div class="btn-group mr-2" role="group" aria-label="First group">
-        <button type="button" class="btn btn-secondary">1</button>
-        <button type="button" class="btn btn-secondary">2</button>
-        <button type="button" class="btn btn-secondary">3</button>
-        <button type="button" class="btn btn-secondary">4</button>
-        <button type="button" class="btn btn-secondary">5</button>
-    </div>
-</div>-->
-
-
-
+       
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
   Take Survey
 </button>
-
         <!-- Modal -->
         <div class="modal fade" id="myModal">
             <div class="modal-dialog" role="document">
@@ -85,35 +63,25 @@
                                 <button type="button" class="btn btn-secondary">4</button>
                                 <button type="button" class="btn btn-secondary">5</button>
                                 <p class="sentiment">Strongly<br>Agree</p>
-
                             </div>
                         </div>
                     </div>
-                    <!--
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
--->
                 </div>
             </div>
         </div>
-
     </div>
 
-
-
-
-
-
-
-
-    <!-- Materialized JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script>
+        let questions = ['blah1 blah1 blah1 blah1', 'blah2 blah2 blah2 blah2'];
+        $('.btn-secondary').on('click', function() {
+            $(".question").empty().html(questions[1])
+        })
+    </script>
+
 </body>
 
 </html>
