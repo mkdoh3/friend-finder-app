@@ -24,3 +24,12 @@
     font-weight: bold;
     margin: 1em
 }
+
+#submit {
+    width: 25%;
+    margin: 0 auto;
+}
+
+.modal-body {
+    text-align: center;
+}
