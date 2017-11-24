@@ -16,52 +16,24 @@
 
 <body>
     <div class="container">
-        <!--
-<h1>Survey Questions</h1>
-<form action="#">
-    <div class="button-div">
-        <input name="group1" type="radio" id="test4" />
-        <label for="test4">1</label>
-    </div>
-    <div class="button-div">
-        <input name="group1" type="radio" id="test4" />
-        <label for="test4">2</label>
-    </div>
-    <div class="button-div">
-        <input name="group1" type="radio" id="test4" />
-        <label for="test4">3</label>
-    </div>
-    <div class="button-div">
-        <input name="group1" type="radio" id="test4" />
-        <label for="test4">4</label>
-    </div>
-    <div class="button-div">
-        <input name="group1" type="radio" id="test4" />
-        <label for="test4">5</label>
-    </div>
-</form>
-       
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-  Take Survey
-</button>
         <!-- Modal -->
         <div class="modal fade" id="myModal">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title m-1" id="exampleModalLabel">Questions #1</h5>
+                        <h5 class="modal-title m-1" id="q-number">Questions #1</h5>
                     </div>
                     <div class="modal-body">
-                        <h4 class="question">blah blah blah blah blah blah blahhhhhhhhhhhhhhh??</h4>
+                        <h4 class="question"></h4>
                         <div class="btn-toolbar">
-                            <div class="btn-group" role="group" aria-label="First group">
+                            <div class="btn-group">
                                 <p class="sentiment">Strongly<br>Disagree</p>
-                                <button type="button" class="btn btn-secondary">1</button>
-                                <button type="button" class="btn btn-secondary">2</button>
-                                <button type="button" class="btn btn-secondary">3</button>
-                                <button type="button" class="btn btn-secondary">4</button>
-                                <button type="button" class="btn btn-secondary">5</button>
+                                <button type="button" class="btn btn-secondary selection" data-value="1">1</button>
+                                <button type="button" class="btn btn-secondary selection" data-value="2">2</button>
+                                <button type="button" class="btn btn-secondary selection" data-value="3">3</button>
+                                <button type="button" class="btn btn-secondary selection" data-value="4">4</button>
+                                <button type="button" class="btn btn-secondary selection" data-value="5">5</button>
                                 <p class="sentiment">Strongly<br>Agree</p>
                             </div>
                         </div>
@@ -69,18 +41,38 @@
                 </div>
             </div>
         </div>
+
+        <h2 class="text-center m-4">Mr. D's Super Compatibility Calcultor</h2>
+        <hr>
+        <h3 class="font-weight-bold">About You</h3>
+        <form class="mt-3 mb-5">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Required">
+            </div>
+            <div class="form-group">
+                <label for="photo">Link to Photo</label>
+                <input type="text" class="form-control" id="photo" placeholder="Required">
+            </div>
+        </form>
+
+        <div class="container btn-container">
+            <button type="button" class="btn btn-primary" id="start-btn" data-toggle="modal" data-target="#myModal">
+  Take Survey
+</button>
+
+        </div>
+
     </div>
 
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-    <script>
-        let questions = ['blah1 blah1 blah1 blah1', 'blah2 blah2 blah2 blah2'];
-        $('.btn-secondary').on('click', function() {
-            $(".question").empty().html(questions[1])
-        })
-    </script>
+    <script src="../data/survey.js"></script>
+
+
+
 
 </body>
 
