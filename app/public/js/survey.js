@@ -35,7 +35,27 @@ $(document).ready(function () {
     });
 
     $("#submit").on('click', function () {
-        //        post newUser
+        console.log(newUser)
+
+        let location = window.location.origin;
+
+        $("#myModal").modal();
+
+        $.ajax({
+            url: location + "/api/friends",
+            data: newUser,
+            type: 'POST',
+            traditional: true, //needed for posting an object that contains an array.. i guess??
+            success: function () {
+
+
+                console.log("success")
+                console.log(data)
+            }
+        });
+
+        // post newUser
+        // find and display match
     })
 
 
