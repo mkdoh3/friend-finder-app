@@ -39,7 +39,7 @@ $(document).ready(function () {
 
         let location = window.location.origin;
 
-        $("#myModal").modal();
+        $("#myModal").modal('toggle');
 
         $.ajax({
             url: location + "/api/friends",
@@ -50,11 +50,10 @@ $(document).ready(function () {
 
 
                 console.log("success")
-                console.log(data)
+                //                console.log(data)
             }
         });
 
-        // post newUser
         // find and display match
     })
 
