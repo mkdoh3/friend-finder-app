@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     let questions = ["Ball of yarn > Tennis ball", "I love swimming!", "I love learning new things!", "I constantly seek the approval of others", "Tuna, yuck!", "I love playing the role of an obedient submissive", "I'm always excited to meet new people!", "On a typical Friday night, you can ususally find me curled up in a blanket on the couch", "I feel like I'm more important than you", "Rub my tummy!"];
 
-    let count;
+    let count = 0;
 
     let newUser = {
         scores: []
@@ -18,18 +18,28 @@ $(document).ready(function () {
             $("#myModal").modal();
             count = 1;
         } else {
-            alert('Please a valid name and URL')
+            alert('Please enter a valid name and URL')
         }
     })
 
+
+    //missing the last number for some reason
+
     $('.selection').on('click', function () {
-        if (count < questions.length) {
-            let value = $(this).data('value');
+        console.log("count", count);
+        let value = $(this).data('value');
+        if (count <= questions.length) {
+            console.log("value", value)
             newUser.scores.push(value);
+            console.log("scores", newUser.scores)
             $(".question").empty().html(questions[count]);
             $("#q-number").empty().html('Question #' + (count + 1));
             count++
-        } else {
+        }
+        if (count > questions.length) {
+            $(".btn-toolbar").empty()
+            $("#q-number").empty()
+            $(".question").empty().html("<h1 class='mb-4'>All Done!</h1>")
             $('#submit').css("display", "initial")
         }
     });
