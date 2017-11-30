@@ -23,7 +23,8 @@ module.exports = function (app) {
                 let b = parseInt(newScores[i]);
                 let difference = Math.abs(a - b);
                 currentTotal += difference;
-            console.log("current", currentTotal)            }
+                console.log("current", currentTotal)
+            }
 
             if (currentTotal < prevLeast) {
                 prevLeast = currentTotal;
@@ -31,6 +32,6 @@ module.exports = function (app) {
                 console.log(match)
             }
         })
-        res.send(match)
+        res.json(match)
     })
 }

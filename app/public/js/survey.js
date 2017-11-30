@@ -26,16 +26,16 @@ $(document).ready(function () {
     //missing the last number for some reason
 
     $('.selection').on('click', function () {
-        console.log("count", count);
         let value = $(this).data('value');
+
         if (count <= questions.length) {
-            console.log("value", value)
             newUser.scores.push(value);
             console.log("scores", newUser.scores)
             $(".question").empty().html(questions[count]);
             $("#q-number").empty().html('Question #' + (count + 1));
             count++
         }
+
         if (count > questions.length) {
             $(".btn-toolbar").empty()
             $("#q-number").empty()
@@ -43,6 +43,7 @@ $(document).ready(function () {
             $('#submit').css("display", "initial")
         }
     });
+
 
     $("#submit").on('click', function () {
         console.log(newUser)
@@ -56,12 +57,8 @@ $(document).ready(function () {
             data: newUser,
             type: 'POST',
             traditional: true, //needed for posting an object that contains an array.. i guess??
-            success: function () {
-
-
-                console.log("success")
-                //                console.log(data)
-            }
+        }).done(function (data) {
+            console.log("response", data)
         });
 
         // find and display match
