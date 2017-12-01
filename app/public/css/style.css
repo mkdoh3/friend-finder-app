@@ -13,7 +13,7 @@ body {
 
 .btn-group {
     width: 80%;
-    margin: 1em auto 1em;
+    margin: 1em auto;
 }
 
 .btn-container {
@@ -53,6 +53,15 @@ body {
 }
 
 @media screen and (max-width: 412px) {
+    .sentiment {
+        font-size: .75em;
+        font-weight: 600;
+        margin: .25em .5em;
+    }
+
+    .btn-group {
+        width: 100%;
+    }
     .heading {
         font-size: 1.45em;
     }
