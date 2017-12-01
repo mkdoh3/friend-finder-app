@@ -12,8 +12,6 @@ app.use(bodyParser.json());
 const PORT = process.env.PORT || 3000;
 
 require("./app/routing/apiRoutes")(app);
-//require("./app/routing/htmlRoutes")(app);
-
 
 
 app.use(express.static(path.join(__dirname, '/app/public'), {

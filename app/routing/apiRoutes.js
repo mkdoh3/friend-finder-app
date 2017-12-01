@@ -9,27 +9,24 @@ module.exports = function (app) {
     })
 
     app.post('/api/friends', function (req, res) {
-        //        friends.push(req.body)
         let newScores = req.body.scores;
-        console.log(newScores);
+        //prev set to 1000 to ensure first go will always be a new 'prevLeast'
         let prevLeast = 1000;
         let match;
         friends.forEach(function (e) {
-
+            //for each obj in the friends array (e), iterate through each scores array and get the abs difference between each friends scores and the newScores, 
+            //add the abs dif to the current total and compare it to the prevLeast. When a new prevLeast is found, make that current friend obj the match
             let currentTotal = 0;
-            console.log("prev", prevLeast);
             for (let i = 0; i < e.scores.length; i++) {
                 let a = parseInt(e.scores[i]);
                 let b = parseInt(newScores[i]);
                 let difference = Math.abs(a - b);
                 currentTotal += difference;
-                console.log("current", currentTotal)
             }
 
             if (currentTotal < prevLeast) {
                 prevLeast = currentTotal;
                 match = e;
-                console.log(match)
             }
         })
         res.json(match)

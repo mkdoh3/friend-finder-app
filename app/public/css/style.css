@@ -1,0 +1,66 @@
+body {
+    min-width: 320px;
+}
+
+.question {
+    text-align: center;
+    margin: .5em auto
+}
+
+.btn-group {
+    width: 80%;
+    margin: 1em auto 1em;
+}
+
+.btn-container {
+    width: 250px;
+}
+
+.btn-container button {
+    font-size: 1.25em;
+}
+
+
+.btn-container button {
+    height: 3em;
+    width: 100%;
+    margin: 0 auto;
+    font-weight: bold;
+    letter-spacing: .07em;
+}
+
+.sentiment {
+    text-align: center;
+    font-size: .9em;
+    font-weight: bold;
+    margin: 1em
+}
+
+#submit {
+    width: 25%;
+    margin: 0 auto;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+img {}
+
+
+@media screen and (min-width: 576px) {
+    .btn-container button {
+        font-size: 1.5em;
+    }
+
+}
+
+@media screen and (max-width: 412px) {
+    .heading {
+        font-size: 1.45em;
+    }
+    .about {
+        font-size: 1.25em;
+    }
+
+}

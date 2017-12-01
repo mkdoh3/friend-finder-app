@@ -8,6 +8,7 @@ $(document).ready(function () {
         scores: []
     };
 
+
     $("#start-btn").on("click", function () {
         let name = $("#name").val();
         let photo = $("#photo").val()
@@ -45,6 +46,7 @@ $(document).ready(function () {
     });
 
 
+
     $("#submit").on('click', function () {
         console.log(newUser)
 
@@ -58,11 +60,44 @@ $(document).ready(function () {
             type: 'POST',
             traditional: true, //needed for posting an object that contains an array.. i guess??
         }).done(function (data) {
-            console.log("response", data)
+            console.log("response", data);
+            updatePage(data);
         });
-
-        // find and display match
     })
+
+    $(".btn-container").on("click", "#reset-btn", function () {
+        location.reload();
+    })
+
+
+
+    function updatePage(data) {
+
+        let reset = $("<button>");
+        let title = $("<h1>");
+        let name = $("<h3>");
+        let photo = $("<img>");
+
+        reset.addClass("btn btn-primary")
+            .attr("id", "reset-btn")
+            .html("Try Again");
+
+        title.html('Your match is:')
+            .addClass('text-center');
+
+        name.html(data.name + '!')
+            .addClass('text-center');
+
+        photo.attr('src', data.photo)
+            .css('display', 'block')
+            .css('margin', '0 auto');
+
+        $("#form-container").empty().append(title, name, photo)
+
+        $(".btn-container").empty().append(reset);
+
+
+    }
 
 
 

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="./css/styling.css">
+    <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
@@ -43,10 +43,11 @@
             </div>
         </div>
 
-        <h2 class="text-center m-4">Mr. D's Super Compatibility Calcultor</h2>
+
+        <h2 class="text-center m-4 heading">Mr. D's Super Compatibility Calcultor</h2>
         <hr>
-        <h3 class="font-weight-bold">About You</h3>
-        <form class="mt-3 mb-5">
+        <form class="mb-5" id="form-container">
+            <h3 class="mb-3 font-weight-bold about">About You</h3>
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Required" required>
@@ -58,10 +59,7 @@
         </form>
 
         <div class="container btn-container">
-            <button type="button" class="btn btn-primary" id="start-btn">
-  Take Survey
-</button>
-
+            <button type="button" class="btn btn-primary" id="start-btn">Take Survey</button>
         </div>
 
     </div>
@@ -71,8 +69,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="./js/survey.js"></script>
-
-
 
 
 </body>
