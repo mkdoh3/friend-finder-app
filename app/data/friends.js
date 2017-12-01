@@ -9,6 +9,11 @@ let friends = [
         'photo': 'https://cdn.shopify.com/s/files/1/1057/6184/files/lil-bub-8.jpg?14363135983481717970',
         'scores': [5, 1, 1, 1, 3, 1, 1, 5, 5, 1]
     },
+    {
+        'name': 'CatDog Thing',
+        'photo': 'http://i.telegraph.co.uk/multimedia/archive/01460/perfect-pet_1460793c.jpg',
+        'scores': [3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+    }
 
 ];
 

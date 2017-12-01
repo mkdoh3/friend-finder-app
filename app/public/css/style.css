@@ -2,6 +2,10 @@ body {
     min-width: 320px;
 }
 
+#form-container {
+    max-width: 700px;
+}
+
 .question {
     text-align: center;
     margin: .5em auto
@@ -18,15 +22,9 @@ body {
 
 .btn-container button {
     font-size: 1.25em;
-}
-
-
-.btn-container button {
-    height: 3em;
-    width: 100%;
-    margin: 0 auto;
+    height: 2.5em;
     font-weight: bold;
-    letter-spacing: .07em;
+    letter-spacing: .06em;
 }
 
 .sentiment {
@@ -45,7 +43,6 @@ body {
     text-align: center;
 }
 
-img {}
 
 
 @media screen and (min-width: 576px) {
