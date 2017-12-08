@@ -3,6 +3,11 @@ let friends = require("../data/friends.js");
 
 module.exports = function (app) {
 
+
+    //need to add a home route!
+    //    router.get("/", function (req, res) {
+
+
     app.get('/api/friends', function (req, res) {
         res.json(friends);
 

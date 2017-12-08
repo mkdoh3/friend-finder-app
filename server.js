@@ -11,13 +11,17 @@ app.use(bodyParser.json());
 
 const PORT = process.env.PORT || 3000;
 
-require("./app/routing/apiRoutes")(app);
-
 
 app.use(express.static(path.join(__dirname, '/app/public'), {
     index: false,
     extensions: ['html']
 }));
+
+app.get('/', function (req, res) {
+    res.sendFile('index.html', {
+        root: __dirname + "/app/public"
+    });
+});
 
 
 
